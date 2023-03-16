@@ -1,6 +1,7 @@
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.awt.image.ImageObserver;
 import java.io.File;
 import java.io.IOException;
 
@@ -18,6 +19,7 @@ public class Card {
   private String face;
   
   private BufferedImage suitImg;
+  private BufferedImage backImg;
   
   private Color color;
   private final Font  font;
@@ -57,7 +59,7 @@ public class Card {
   }
   
   // Graphically define the card, front and back
-  public void draw(Graphics g) {
+  public void draw(Graphics g)  {
 
     if (!faceDown) {
       // Card back
@@ -69,9 +71,12 @@ public class Card {
       g.drawImage(suitImg, cornerX + 6, cornerY + 26, null);
     } else {
 
+      Image image = backImg.getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+
       // Card back
-      g.setColor(new Color(156, 14, 23));
-      g.fillRect(cornerX, cornerY, WIDTH, HEIGHT);
+      g.drawImage(image,cornerX, cornerY, null);
+     // g.setColor(new Color(156, 14, 23));
+    //  g.fillRect(cornerX, cornerY, WIDTH, HEIGHT);
     }
     g.setColor(Color.black);
     g.drawRect(cornerX, cornerY, WIDTH, HEIGHT);
@@ -80,6 +85,7 @@ public class Card {
   // Initializes the suit and face images of the card depending on what suit and face the card is
   private void initImage() {
     try {
+      backImg = ImageIO.read(new File("resources/back.png"));
       switch (suit) {
       case "S":
         suitImg = ImageIO.read(new File("resources/spade.png"));
