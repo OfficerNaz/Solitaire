@@ -1,7 +1,6 @@
     SOLITAIRE GAME RULES:
 
 
-
     OBJECTIVE: The objective is to move all cards from the tableau and from the stockpile into four build piles.
     NUMBER OF PLAYERS: 1 player
     NUMBER OF CARDS: 52 card deck
@@ -11,6 +10,7 @@
 
 
     OVERVIEW
+
     Solitaire is a card game for 1 person.
     The goal of the game is to get all the cards from the stock pile into the foundation piles.
 

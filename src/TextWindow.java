@@ -9,7 +9,7 @@ public class TextWindow extends JFrame {
     private static final int FRAME_WIDTH  = 725;
     private static final int FRAME_HEIGHT = 750;
     private JTextArea jTextArea;
-    public TextWindow(String filename){
+    public TextWindow(String filename, String title){
         getRootPane().setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
         int width = 800, height = 600;
         //TO DO: make a panel in TITLE MODE
@@ -26,7 +26,7 @@ public class TextWindow extends JFrame {
         try {
             BufferedReader input = new BufferedReader(new InputStreamReader(
                     new FileInputStream(file)));
-            jTextArea.read(input, "RULES:");
+            jTextArea.read(input, title);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -37,7 +37,7 @@ public class TextWindow extends JFrame {
         setSize(FRAME_WIDTH,FRAME_HEIGHT);
         //centers window
         //setLocationRelativeTo(null);
-        setTitle("Rules");
+        setTitle(title);
         setResizable(false);
         setVisible(true);
     }

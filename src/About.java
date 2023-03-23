@@ -29,13 +29,13 @@ public class About implements ActionListener {
         about = new JMenuItem("About");
         menu.add(about);
         rules.addActionListener(e -> {
-            new TextWindow("rules.txt");
+            new TextWindow("rules.txt","RULES");
         });
         help.addActionListener(e -> {
-            new TextWindow("contact.txt");
+            new TextWindow("contact.txt","HELP" );
         });
         about.addActionListener(e -> {
-            new TextWindow("about.txt");
+            new TextWindow("about.txt","ABOUT");
         });
 
 
