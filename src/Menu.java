@@ -16,19 +16,19 @@ public class Menu implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
     }
-    public JMenuBar createMenu() {
-        JMenuBar menuBar;
+    public JMenu createMenu() {
         JMenu menu;
         ButtonGroup gameTypeOptions;
         JRadioButtonMenuItem gameTypeRegular, gameTypeVegas;
         JMenuItem newGame;
 
-        // Create menu bar
-        menuBar = new JMenuBar();
+
+        // Create menu
+        menu = new JMenu();
 
         // Build menu
-        menu = new JMenu("Options");
-        menuBar.add(menu);
+        menu = new JMenu("Menu");
+        //menu.add(menu);
 
         // Build menu options
         newGame = new JMenuItem("New Game");
@@ -48,6 +48,7 @@ public class Menu implements ActionListener {
         gameTypeVegas.addActionListener(e -> Handler.reloadGame(2));
         gameTypeOptions.add(gameTypeVegas);
         menu.add(gameTypeVegas);
+        menu.addSeparator();
 
         // !!! V-VIEW PART - FINISH
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -66,7 +67,8 @@ public class Menu implements ActionListener {
             }
 
         });
-        return menuBar;
+
+        return menu;
         // !!! M-MODEL PART - FINISH
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }

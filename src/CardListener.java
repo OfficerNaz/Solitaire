@@ -315,7 +315,7 @@ public class CardListener extends MouseInputAdapter {
 
     if (event.getClickCount() == 2 && event.getButton() == MouseEvent.BUTTON1) {
       board.selectedPile = getPileClicked(event);
-      System.out.println(board.selectedPile);
+
       if (board.selectedPile != null) {
 
         Pile p = board.selectedPile;

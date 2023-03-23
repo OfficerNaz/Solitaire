@@ -19,11 +19,11 @@ public class Handler {
 
   private static final int FRAME_WIDTH  = 725;
   private static final int FRAME_HEIGHT = 750;
-  
+
   public static void main(String[] args) {
     loadGame();
   }
-  
+
   /**
    * Runs the game. There is currently no point in having a game loop, since the only
    * time the game needs to be re-painted is when the user moves a card.
@@ -38,7 +38,7 @@ public class Handler {
     formatPanel.add(scoreBoard, BorderLayout.SOUTH);
     formatPanel.revalidate();
   }
-  
+
   /**
    * Initializes game objects
    */
@@ -48,9 +48,14 @@ public class Handler {
     formatPanel = new JPanel();
     gamePanel = new GameBoard();
     scoreBoard = gamePanel.getScoreBoard();
+    JMenuBar menuBar = new JMenuBar();
     Menu gameMenu = new Menu();
+    About aboutMenu = new About();
+    menuBar.add(gameMenu.createMenu());
+    menuBar.add(aboutMenu.createMenu());
 
-    gameFrame.setJMenuBar(gameMenu.createMenu());
+    gameFrame.setJMenuBar(menuBar);
+
     gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     gameFrame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
 
