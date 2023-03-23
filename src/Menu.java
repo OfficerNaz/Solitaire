@@ -19,7 +19,7 @@ public class Menu implements ActionListener {
     public JMenu createMenu() {
         JMenu menu;
         ButtonGroup gameTypeOptions;
-        JRadioButtonMenuItem gameTypeRegular, gameTypeVegas;
+        JRadioButtonMenuItem gameTypeRegular, gameTypeVegas, gameTypeDrawThreeCard, gameTypeDrawOneCard;
         JMenuItem newGame;
 
 
@@ -50,6 +50,24 @@ public class Menu implements ActionListener {
         menu.add(gameTypeVegas);
         menu.addSeparator();
 
+        gameTypeDrawOneCard = new JRadioButtonMenuItem("Draw 1 Card");
+        gameTypeDrawOneCard.addActionListener(e -> {
+            Handler.reloadGame(4);
+        });
+        gameTypeOptions.add(gameTypeDrawOneCard );
+        menu.add(gameTypeDrawOneCard );
+
+
+        gameTypeDrawThreeCard = new JRadioButtonMenuItem("Draw 3 Cards");
+        gameTypeDrawThreeCard.addActionListener(e -> {
+            Handler.reloadGame(3);
+        });
+        gameTypeOptions.add(gameTypeDrawThreeCard);
+        menu.add(gameTypeDrawThreeCard);
+
+
+
+
         // !!! V-VIEW PART - FINISH
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -64,6 +82,12 @@ public class Menu implements ActionListener {
             }
             if (gameTypeVegas.isSelected()) {
                 Handler.reloadGame(2);
+            }
+            if (gameTypeDrawThreeCard.isSelected()) {
+                Handler.reloadGame(3);
+            }
+            if (gameTypeDrawOneCard.isSelected()) {
+                Handler.reloadGame(4);
             }
 
         });

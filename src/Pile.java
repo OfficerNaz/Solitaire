@@ -156,7 +156,12 @@ public class Pile {
       }
     }
   }
-
+  public boolean hasTopCardTurned() {
+    if (this.size() == 0) {
+      return false;
+    }
+    return true;
+  }
   // !!! V-VIEW PART - FINISH
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -17,7 +17,10 @@ public class Deck {
     return (e.getX() >= xLoc && e.getX() <= xLoc + Card.WIDTH) &&
             (e.getY() >= yLoc && e.getY() <= yLoc + Card.HEIGHT);
   }
-
+  public boolean hasBeenDoubleClicked(MouseEvent e) {
+    return (e.getX() >= xLoc && e.getX() <= xLoc + Card.WIDTH) &&
+            (e.getY() >= yLoc && e.getY() <= yLoc + Card.HEIGHT);
+  }
   // !!! C-CONTROLLER PART - FINISH
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

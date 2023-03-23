@@ -74,7 +74,7 @@ public class CardListener extends MouseInputAdapter {
                 deck.removeCardOnTop();
               }
             }
-          } else {
+          } else  {
             Card c = deck.getCardOnTop();
             if (c != null) {
               stockpile.addToPile(c);

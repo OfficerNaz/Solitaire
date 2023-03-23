@@ -17,7 +17,7 @@ public class Handler {
   private static ScoreBoard scoreBoard;
 
 
-  private static final int FRAME_WIDTH  = 725;
+  private static final int FRAME_WIDTH  = 750;
   private static final int FRAME_HEIGHT = 750;
 
   public static void main(String[] args) {
