@@ -25,8 +25,12 @@
     one by one so that the first column consist of one card face up and the last column has six cards
     face down and one card face up. Use the image below for reference as to how the initial setup should look.
 
-    SOLITAIRE, SOLITAIRE gameplay, layout, tableau
 
+    ______________________________________________________________________________________________
+
+    REGULAR RULES
+    ______________________________________________________________________________________________
+    SOLITAIRE, SOLITAIRE gameplay, layout, tableau
 
     GAMEPLAY
     There are two acceptable ways of dealing cards from the stockpile.
@@ -35,7 +39,8 @@
 
     So essentially your objective is to move cards around the board to create complete build piles.
     You create a build pile by layering cards of opposite color on top of each other in descending order.
-    You are allowed to move around the top facing cards on the tableau as well as cards that are flipped from the deck.
+    You are allowed to move around the top facing cards on the tableau as well as cards that are flipped
+    from the deck.
     For example, in the image above the black nine of spades can be moved onto the red 10 of hearts
     to begin the consolidation process.
     If you move a top facing card onto another top facing card on the tableau
@@ -47,7 +52,8 @@
     and they are next in order of hierarchy. For example,
     in the image above the ace of hearts can be moved up to start the build pile,
     the two of hearts can then be moved on top of it as it is next in the order of sequence.
-    Notice that the ace leaves an empty space on the tableau, only a king can be moved onto an empty space such as this,
+    Notice that the ace leaves an empty space on the tableau,
+    only a king can be moved onto an empty space such as this,
     and when moved, all the cards on top of it must be moved over as well.
 
     You are only required to use cards from the stock when you run out of moves in your columns.
@@ -62,3 +68,33 @@
     END OF GAME
     You have successfully won the game of solitaire when all cards have been removed from the tableau
     and successfully placed on the build piles.
+
+
+
+
+    ______________________________________________________________________________________________
+
+    VEGAS RULES (VEGAS SOLITAIRE)
+    ______________________________________________________________________________________________
+    This is a version of the Klondike Solitaire, but with some constraints.
+    The same rules for moving cards apply. You can read the Klondike rules on the
+
+
+    The main constraint is that you can browse the Stock pile only once.
+    Once you reach the end of the Stock pile and that’s it. The game is over.
+
+    The Vegas Solitaire game is all about the Dollar score. You can find the dollar score below the game,
+    on the right.
+
+    When you start a new game, your score is reduced by 52 USD.
+    When you move a card to a Foundation pile, you get +5 USD.
+    Your score is saved in a browser cookie. So, if you visit our site again,
+    your previous result is going to be preserved. Of course,
+    it will be reduced by 52 USD for the new game that is started automatically.
+
+    The game goal is to move as many cards as possible to the Foundation piles.
+    More moved cards mean more dollars earned.
+    The ultimate goal is to move all the cards to the Foundation piles,
+    but since you can browse the Stock pile only once, this happens rather rarely.
+
+    Don’t get frustratred! It’s just a fun game!

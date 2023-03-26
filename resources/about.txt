@@ -1,2 +1,3 @@
-    Solitaire Game
-    release version 2.2.21
+    SOLITAIRE GAME
+
+    version 2.3.21
